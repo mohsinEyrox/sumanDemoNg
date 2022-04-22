@@ -33,12 +33,10 @@
                 <td>{{rowData.RoleName}}</td>
                 <td>{{rowData.age}}</td>
                 <td>
-                    <button type="button" class="btn btn-sm btn-primary" (click)="edit(rowData.Id,rowIndex)">
-                        <i class="far fa-trash-alt"></i> Edit
-                    </button>
-                    <button type="button" class="btn btn-sm btn-secondary ms-3" (click)="delete(rowData.Id,rowIndex)">
-                        <i class="far fa-trash-alt"></i> Delete
-                    </button>
+                    <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-info"
+                        (click)="edit(rowData.Id,rowIndex)"></button>
+                    <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger"
+                        (click)="delete(rowData,rowIndex)"></button>
                 </td>
             </tr>
 

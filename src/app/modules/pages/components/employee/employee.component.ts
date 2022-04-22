@@ -55,8 +55,7 @@ export class EmployeeComponent implements OnInit {
     })
   }
 
-  delete(id: number, idx: number) {
-    let employee = this.employees.find(e => e.id == id)
+  delete(employee: Employee, idx: number) {
     this.http.delete('Employee/DeleteEmployee', employee).then(value => {
       this.employees.splice(idx, 1)
     }).catch(reason => {
