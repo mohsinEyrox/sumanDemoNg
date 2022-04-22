@@ -12,7 +12,11 @@ import { EmployeeActionComponent } from './employee-action/employee-action.compo
 export class EmployeeComponent implements OnInit {
   maxResultCount: number = 10;
   skipCount: number = 0;
-  employees: Employee[] = []
+  employees: Employee[] = [
+    {
+      age:'12'
+    } as Employee
+  ]
   rows: number = 10;
   page: number = 1;
   totalCount: number = 0
